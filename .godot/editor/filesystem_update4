@@ -1,0 +1,5 @@
+res://data/levels/unit_selection.tscn
+res://code/menu/unit_selection.gd
+res://data/levels/main_menu.tscn
+res://data/levels/deck_selection.tscn
+res://data/widgets/unit_button.tscn

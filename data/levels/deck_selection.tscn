@@ -1,0 +1,81 @@
+[gd_scene load_steps=3 format=3 uid="uid://2u3x7wrqbodg"]
+
+[ext_resource type="Script" path="res://code/menu/deck_selection.gd" id="1_cfvuv"]
+[ext_resource type="PackedScene" uid="uid://dkokv0n7isjqq" path="res://data/widgets/menu_button.tscn" id="2_u0qhk"]
+
+[node name="DeckSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cfvuv")
+
+[node name="ReturnButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 166.0
+offset_bottom = 114.0
+text = "Return"
+
+[node name="MenuButton" parent="." instance=ExtResource("2_u0qhk")]
+layout_mode = 1
+
+[node name="DeckButtonsContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 298.0
+offset_top = 179.0
+offset_right = 854.0
+offset_bottom = 539.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_group_ = true
+
+[node name="Deck0" type="MarginContainer" parent="DeckButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="DeckButton" type="Button" parent="DeckButtonsContainer/Deck0"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Create a new deck"
+text = "Deck 1"
+
+[node name="Deck1" type="MarginContainer" parent="DeckButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="Button" type="Button" parent="DeckButtonsContainer/Deck1"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Deck 2"
+
+[node name="Deck2" type="MarginContainer" parent="DeckButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="Button" type="Button" parent="DeckButtonsContainer/Deck2"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Deck 3"
+
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="DeckButtonsContainer/Deck0/DeckButton" to="." method="_on_deck_button_pressed"]

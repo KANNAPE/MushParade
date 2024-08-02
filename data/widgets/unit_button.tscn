@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5dffmkt6tsr8"]
+
+[ext_resource type="Texture2D" uid="uid://b40hkhgyqcksx" path="res://data/textures/units/champi_de_paname_N.png" id="1_cue74"]
+[ext_resource type="Texture2D" uid="uid://bsqk60r5jwmh3" path="res://data/textures/units/champi_de_paname_S.png" id="2_8ueiu"]
+[ext_resource type="Texture2D" uid="uid://c0850rne6p8cu" path="res://data/textures/units/champi_de_paname_H.png" id="2_gp1a3"]
+[ext_resource type="Script" path="res://code/game/unit_button.gd" id="3_f747t"]
+
+[node name="UnitButton" type="TextureButton"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -952.0
+offset_bottom = -448.0
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("1_cue74")
+texture_pressed = ExtResource("2_8ueiu")
+texture_hover = ExtResource("2_gp1a3")
+script = ExtResource("3_f747t")
